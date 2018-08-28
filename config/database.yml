@@ -1,4 +1,4 @@
-development:
+development: &development
   adapter: postgresql
   encoding: utf8
   host: localhost
@@ -9,3 +9,7 @@ development:
   pool: 10
   prepared_statements: false
   database: sample_app
+
+
+test:
+  <<: *development
